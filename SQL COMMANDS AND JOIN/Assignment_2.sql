@@ -1,11 +1,16 @@
-insert into user(name,contactNo,email,DOB,admin) values("Mudit Jain",1111111111,"mj@gmail.com","2000-08-30",false);
-insert into user(name,contactNo,email,DOB,admin) values("Lalita Jain",2222222222,"lj@gmail.com","1970-08-22",false);
-insert into user(name,contactNo,email,DOB,admin) values("Dinesh Jain",3333333333,"dj@gmail.com","1975-08-22",false);
-insert into user(name,contactNo,email,DOB,admin) values("Hrithik Sharma",4444444444,"hs@gmail.com","1995-08-22",false);
-insert into user(name,contactNo,email,DOB,admin) values("Ravindra Singh",5555555555,"ars@gmail.com","1996-08-22",false);
-insert into user(name,contactNo,email,DOB,admin) values("Hardeep Singh",6666666666,"hs1@gmail.com","1997-08-22",false);
-insert into user(name,contactNo,email,DOB,admin) values("Abhi laxar",7777777777,"al@gmail.com","1998-08-22",false);
-insert into user(name,contactNo,email,DOB,admin) values("Rahul basrani",8888888888,"rb@gmail.com","1999-08-22",false);
+/*
+inserting values in user table 
+*/
+insert into user(name,contactNo,email,DOB,admin) values("suraj shrivastava",9772217746,"srj@gmail.com","1999-05-22",false);
+insert into user(name,contactNo,email,DOB,admin) values("khushi shrivastava",797723757,"khus@gmail.com","2001-08-05",false);
+insert into user(name,contactNo,email,DOB,admin) values("kiran shrivastava",7337289333,"kiran@gmail.com","1960-05-16",false);
+insert into user(name,contactNo,email,DOB,admin) values("ashok shrivastava",7878776665,"ash@gmail.com","1970-03-04",false);
+insert into user(name,contactNo,email,DOB,admin) values("Ananya bisht",4356767456,"anb@gmail.com","1999-02-07",false);
+insert into user(name,contactNo,email,DOB,admin) values("rishabh khadelwal",4556576390,"rishi@gmail.com","1998-10-07",false);
+insert into user(name,contactNo,email,DOB,admin) values("saloni jain",9787654678,"saloni@gmail.com","1999-07-30",false);
+insert into user(name,contactNo,email,DOB,admin) values("swati pancholi",9876654542,"swati@gmail.com","1999-12-11",false);
+
+
 
 /*
 inserting values in categories and childcategories table 
@@ -73,6 +78,7 @@ insert into productCategory values(14,14);
 insert into productCategory values(15,14);
 
 
+
 /*
 inserting values in orders table 
 */
@@ -90,6 +96,7 @@ insert into orders(userID,orderTotal) values(2,15000);
 insert into orders(userID,orderTotal) values(3,4000);
 insert into orders(userID,orderTotal) values(3,200);
 insert into orders(userID,orderTotal) values(6,7000);
+
 
 /*
 inserting values in orderdetails table 
@@ -114,6 +121,7 @@ insert into orderdetails(orderID,shipped,cancelled,returned,productID) values(10
 insert into orderdetails(orderID,shipped,cancelled,returned,productID) values(11,false,false,false,4);
 insert into orderdetails(orderID,shipped,cancelled,returned,productID) values(12,false,false,false,8);
 
+
 /*
 return product details and their categories which are in stock and sorted by their adding time.
 */
@@ -125,6 +133,7 @@ from
 where
     p.categoryID = c.categoryID and p.quantity > 0
 order by p.addedOn desc;
+
 
 /*
 return the list of the products who don't have any image
@@ -139,6 +148,7 @@ where
     from
         images); 
         
+ 
 /*
 return the all the categories and group them and sorted them up with parent category 
 */
@@ -163,7 +173,7 @@ from
         parentCatId as categoryId
     from
         categories where parentCatId is not null) and c.parentCatId is null;
-        
+
 /*
 return the list of the products who lies in the mobile category
 */
@@ -178,6 +188,7 @@ where
         categories
     where
         categories.categoryName = 'mobile');
+
 
 /*
 return the list of the products whose quantity is less the 50

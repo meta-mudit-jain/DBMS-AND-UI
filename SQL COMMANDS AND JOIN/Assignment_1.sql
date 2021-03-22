@@ -1,4 +1,7 @@
-use ecommerce;
+use eCommerce;
+/*
+creating all the required tables
+*/
 create table user(
     userID int primary key AUTO_INCREMENT,
     name char(30),
@@ -29,7 +32,6 @@ create table products(
     description varchar(200),
     quantity int,
     addedOn timestamp NOT NULL,
-    categoryID int,
     sales int
 );
 
