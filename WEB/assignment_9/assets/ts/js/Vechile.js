@@ -50,6 +50,8 @@ var Vehicle = /** @class */ (function () {
                 _this.setEmployeeId(target.value);
             else if (currentInputId == "ident")
                 _this.setIdentification(target.value);
+            
+             
             target.classList.toggle("hide");
             nextTarget === null || nextTarget === void 0 ? void 0 : nextTarget.classList.toggle("hide");
         };

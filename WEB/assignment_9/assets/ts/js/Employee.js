@@ -11,7 +11,7 @@ var EmployeeDetails = /** @class */ (function () {
         //return true if name valiation  get success
         //@param - name
         this.isValidName = function (name) {
-            var regex = /^[A-Za-z]{2,}$/;
+            var regex = /^[A-Za-z ]{2,}$/;
             return regex.test(name.toString());
         };
         //return true if conf password valiation  get success

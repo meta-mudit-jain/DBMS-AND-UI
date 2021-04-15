@@ -2,7 +2,7 @@ var http = require('http');
 var fs = require('fs');
 
 var server = http.createServer((req,resp)=> {
-        fs.readFile("index.html", function (error, pgResp) {
+        fs.readFile("new.html", function (error, pgResp) {
             if (error) {
                 resp.writeHead(404);
                 resp.write('Contents you are looking are Not Found');
